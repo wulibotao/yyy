@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64A794B0-5929-4AF9-9FB3-C65F58F603FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Payroll</RootNamespace>
+    <AssemblyName>Payroll</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bill.Designer.cs">
+      <DependentUpon>bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCommissionedEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CCommissionedEmployee.Designer.cs">
+      <DependentUpon>CCommissionedEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ch27.Payroll\AddCommissionedEmployee.cs" />
+    <Compile Include="Ch27.Payroll\AddEmployeeTransaction.cs" />
+    <Compile Include="Ch27.Payroll\AddHourlyEmployee.cs" />
+    <Compile Include="Ch27.Payroll\AddSalariedEmployee.cs" />
+    <Compile Include="Ch27.Payroll\Affiliation.cs" />
+    <Compile Include="Ch27.Payroll\BiweeklySchedule.cs" />
+    <Compile Include="Ch27.Payroll\ChangeAffiliationTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeClassificationTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeCommissionedTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeDirectTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeEmployeeTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeHoldTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeHourlyTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeMailTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeMehtodTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeMemberTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeMethodTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeNameTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeSalariedTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ChangeUnaffiliatedTransaction.cs" />
+    <Compile Include="Ch27.Payroll\CommissionClassification.cs" />
+    <Compile Include="Ch27.Payroll\DateUtil.cs" />
+    <Compile Include="Ch27.Payroll\DeleteEmployeeTransaction.cs" />
+    <Compile Include="Ch27.Payroll\DirectDepositMethod.cs" />
+    <Compile Include="Ch27.Payroll\Employee.cs" />
+    <Compile Include="Ch27.Payroll\HoldMethod.cs" />
+    <Compile Include="Ch27.Payroll\HourlyClassification.cs" />
+    <Compile Include="Ch27.Payroll\InMemoryPayrollDatabase.cs" />
+    <Compile Include="Ch27.Payroll\MailMethod.cs" />
+    <Compile Include="Ch27.Payroll\MonthlySchedule.cs" />
+    <Compile Include="Ch27.Payroll\NoAffiliation.cs" />
+    <Compile Include="Ch27.Payroll\Paycheck.cs" />
+    <Compile Include="Ch27.Payroll\PaydayTransaction.cs" />
+    <Compile Include="Ch27.Payroll\PaymentClassification.cs" />
+    <Compile Include="Ch27.Payroll\PaymentMethod.cs" />
+    <Compile Include="Ch27.Payroll\PaymentSchedule.cs" />
+    <Compile Include="Ch27.Payroll\PayrollDatabase.cs" />
+    <Compile Include="Ch27.Payroll\SalariedClassification.cs" />
+    <Compile Include="Ch27.Payroll\SalesReceipt.cs" />
+    <Compile Include="Ch27.Payroll\SalesReceiptTransaction.cs" />
+    <Compile Include="Ch27.Payroll\ServiceCharge.cs" />
+    <Compile Include="Ch27.Payroll\ServiceChargeTransaction.cs" />
+    <Compile Include="Ch27.Payroll\sytpayrolldatabase.cs" />
+    <Compile Include="Ch27.Payroll\TimeCard.cs" />
+    <Compile Include="Ch27.Payroll\TimeCardTransaction.cs" />
+    <Compile Include="Ch27.Payroll\Transaction.cs" />
+    <Compile Include="Ch27.Payroll\UnionAffiliation.cs" />
+    <Compile Include="Ch27.Payroll\WeeklySchedule.cs" />
+    <Compile Include="ChangeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeName.Designer.cs">
+      <DependentUpon>ChangeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHourlyemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHourlyemployee.Designer.cs">
+      <DependentUpon>CHourlyemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommissionedEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommissionedEmployee.Designer.cs">
+      <DependentUpon>CommissionedEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteEmployee.Designer.cs">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSalariedemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSalariedemployee.Designer.cs">
+      <DependentUpon>CSalariedemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hourlyemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hourlyemployee.Designer.cs">
+      <DependentUpon>Hourlyemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members.Designer.cs">
+      <DependentUpon>Members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalariedEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalariedEmployee.Designer.cs">
+      <DependentUpon>SalariedEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salesreceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salesreceipt.Designer.cs">
+      <DependentUpon>Salesreceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timecard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timecard.Designer.cs">
+      <DependentUpon>Timecard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="bill.resx">
+      <DependentUpon>bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCommissionedEmployee.resx">
+      <DependentUpon>CCommissionedEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeName.resx">
+      <DependentUpon>ChangeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHourlyemployee.resx">
+      <DependentUpon>CHourlyemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommissionedEmployee.resx">
+      <DependentUpon>CommissionedEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSalariedemployee.resx">
+      <DependentUpon>CSalariedemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteEmployee.resx">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hourlyemployee.resx">
+      <DependentUpon>Hourlyemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainform.resx">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members.resx">
+      <DependentUpon>Members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SalariedEmployee.resx">
+      <DependentUpon>SalariedEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salesreceipt.resx">
+      <DependentUpon>Salesreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timecard.resx">
+      <DependentUpon>Timecard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Ch27.Payroll\app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
